@@ -1,0 +1,2 @@
+C:\Users\SGA\Documents\GitHub\bathroom1\Portfolio2\PO2\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\SGA\Documents\GitHub\bathroom1\Portfolio2\PO2\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache

@@ -19,6 +19,12 @@ public class PlayerController : MonoBehaviour
         float Hor = Input.GetAxisRaw("Horizontal");
         float Ver = Input.GetAxisRaw("Vertical");
 
+       //if (Hor == -1)
+       //    Player.transform.Rotate(0.0f, -90.0f, 0.0f);
+       //else if(Hor ==1)
+       //    Player.transform.Rotate(0.0f, 90.0f, 0.0f);
+       // else
+       //     Player.transform.Rotate(0.0f, 180.0f, 0.0f);
         if (Hor != 0 || Ver != 0)
             Anim.SetBool("Walk", true);
         else
