@@ -5,13 +5,15 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     GameObject Player;
+    GameObject Chef;
     Animator Anim;
     [SerializeField] float Speed;
 
     private void Start()
     {
-        Player = GameObject.Find("Chef");
-        Anim = Player.transform.GetComponent<Animator>();
+        Player = GameObject.Find("Player");
+        Chef = GameObject.Find("Chef");
+        Anim = Chef.transform.GetComponent<Animator>();
         Speed = 5.0f;
     }
     private void Update()
@@ -19,12 +21,14 @@ public class PlayerController : MonoBehaviour
         float Hor = Input.GetAxisRaw("Horizontal");
         float Ver = Input.GetAxisRaw("Vertical");
 
-       //if (Hor == -1)
-       //    Player.transform.Rotate(0.0f, -90.0f, 0.0f);
-       //else if(Hor ==1)
-       //    Player.transform.Rotate(0.0f, 90.0f, 0.0f);
-       // else
-       //     Player.transform.Rotate(0.0f, 180.0f, 0.0f);
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+            Chef.transform.eulerAngles = new Vector3(0.0f, 90.0f, 0.0f); 
+        else if(Input.GetKeyDown(KeyCode.RightArrow))
+            Chef.transform.eulerAngles = new Vector3(0.0f, -90.0f, 0.0f);
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+            Chef.transform.eulerAngles = new Vector3(0.0f, 180.0f, 0.0f);
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+            Chef.transform.eulerAngles = new Vector3(0.0f, 0.0f, 0.0f);
         if (Hor != 0 || Ver != 0)
             Anim.SetBool("Walk", true);
         else
