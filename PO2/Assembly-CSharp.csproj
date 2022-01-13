@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>7.1</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -54,6 +54,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Code\PlayerController.cs" />
+    <Compile Include="Assets\Code\Create_CookMaterial\SeaweedCreate.cs" />
+    <Compile Include="Assets\Code\Create_CookMaterial\FollowiingPlayer.cs" />
+    <Compile Include="Assets\Code\CameraCulling.cs" />
+    <Compile Include="Assets\Code\Create_CookMaterial\CucumberCreate.cs" />
+    <Compile Include="Assets\Code\Create_CookMaterial\PrawnCreate.cs" />
+    <Compile Include="Assets\Code\Create_CookMaterial\RiceCreate.cs" />
+    <Compile Include="Assets\Code\Create_CookMaterial\Prawn_Follow.cs" />
+    <Compile Include="Assets\Code\Create_CookMaterial\LeftObject_Follow.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -643,6 +651,9 @@
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
