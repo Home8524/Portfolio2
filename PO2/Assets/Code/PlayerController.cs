@@ -12,8 +12,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         Player = GameObject.Find("Player");
-        Chef = GameObject.Find("Chef");
-        Anim = Chef.transform.GetComponent<Animator>();
+        Anim = transform.GetComponent<Animator>();
         Speed = 5.0f;
     }
     private void Update()
@@ -22,13 +21,13 @@ public class PlayerController : MonoBehaviour
         float Ver = Input.GetAxisRaw("Vertical");
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
-            Chef.transform.eulerAngles = new Vector3(0.0f, 90.0f, 0.0f); 
+            transform.eulerAngles = new Vector3(0.0f, 90.0f, 0.0f); 
         else if(Input.GetKeyDown(KeyCode.RightArrow))
-            Chef.transform.eulerAngles = new Vector3(0.0f, -90.0f, 0.0f);
+            transform.eulerAngles = new Vector3(0.0f, -90.0f, 0.0f);
         else if (Input.GetKeyDown(KeyCode.UpArrow))
-            Chef.transform.eulerAngles = new Vector3(0.0f, 180.0f, 0.0f);
+            transform.eulerAngles = new Vector3(0.0f, 180.0f, 0.0f);
         else if (Input.GetKeyDown(KeyCode.DownArrow))
-            Chef.transform.eulerAngles = new Vector3(0.0f, 0.0f, 0.0f);
+            transform.eulerAngles = new Vector3(0.0f, 0.0f, 0.0f);
         if (Hor != 0 || Ver != 0)
             Anim.SetBool("Walk", true);
         else
@@ -38,12 +37,13 @@ public class PlayerController : MonoBehaviour
         {
             Anim.SetBool("Run", true);
             Speed = 10.0f;
-            Invoke("RunStart",1.0f);
+            Invoke("RunStart",0.3f);
         }
-        Player.transform.Translate(
-            Hor * Speed * Time.deltaTime,
-            0,
-            Ver * Speed * Time.deltaTime);
+            Player.transform.Translate(
+                Hor * Speed * Time.deltaTime,
+                0,
+                Ver * Speed * Time.deltaTime);
+        
     }
     void RunStart()
     {

@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1743
     height: 861
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Hierarchy
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 421
     height: 476
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -71,10 +71,10 @@ MonoBehaviour:
     y: 30
     width: 1743
     height: 811
-  m_MinSize: {x: 879, y: 492}
-  m_MaxSize: {x: 16004, y: 14042}
+  m_MinSize: {x: 877, y: 492}
+  m_MaxSize: {x: 16002, y: 14042}
   vertical: 0
-  controlID: 149
+  controlID: 94
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,10 +250,10 @@ MonoBehaviour:
     y: 0
     width: 1352
     height: 811
-  m_MinSize: {x: 604, y: 492}
-  m_MaxSize: {x: 12004, y: 14042}
+  m_MinSize: {x: 602, y: 492}
+  m_MaxSize: {x: 12002, y: 14042}
   vertical: 1
-  controlID: 150
+  controlID: 95
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -276,10 +276,10 @@ MonoBehaviour:
     y: 0
     width: 1352
     height: 476
-  m_MinSize: {x: 604, y: 221}
-  m_MaxSize: {x: 12004, y: 4021}
+  m_MinSize: {x: 602, y: 221}
+  m_MaxSize: {x: 12002, y: 4021}
   vertical: 0
-  controlID: 151
+  controlID: 96
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -299,8 +299,8 @@ MonoBehaviour:
     y: 0
     width: 601
     height: 476
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -92030
+  m_LastSelectedObjectID: -72008
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -486,22 +486,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 3
     m_Folders:
-    - Assets/Code/Create_CookMaterial
+    - Assets/Code
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Code/Create_CookMaterial
+  - Assets/Code
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\SGA\Documents\GitHub\bathroom1\Portfolio2\PO2
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 30}
-    m_SelectedIDs: 865d0200
-    m_LastClickedID: 155014
-    m_ExpandedIDs: 000000002c5900002e59000030590000325900003459000036590000b859000000ca9a3b
+    m_SelectedIDs: 285a0000
+    m_LastClickedID: 23080
+    m_ExpandedIDs: 00000000985900009a5900009c5900009e590000a0590000a2590000285a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -529,7 +529,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002c5900002e59000030590000325900003459000036590000
+    m_ExpandedIDs: 00000000985900009a5900009c5900009e590000a0590000a2590000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -649,24 +649,24 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: de76feffe67bfeff8ca8feff84fefeff1009ffff2871ffff4afbffff52fbfffff03d0000c03e0000fa4000005e410000b84200004a450000564500009a450000104700005448000076490000404a00000e4c0000dc4c0000604d00008c4e0000e25000001451000048510000e8520000
+      scrollPos: {x: 0, y: 1438}
+      m_SelectedIDs: 50e3feff
+      m_LastClickedID: -72880
+      m_ExpandedIDs: e013ffffd4d0ffff32d1ffff48d2ffff52fbfffff23d0000f63d0000fa3d00000c3e0000143e0000183e0000363e00003e3e0000be3e0000d83e0000fa3e0000063f000042410000dc4100004643000082430000f4440000ec4500001a46000000480000904a0000304d0000504f00009c510000665200004053000078530000cc530000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Wood1
+        m_OriginalName: Wood1
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 20762
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -712,9 +712,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.2055151, y: 1.0973969, z: 3.2430117}
+    m_Target: {x: 2.7660325, y: 1.5899556, z: 10.960814}
     speed: 2
-    m_Value: {x: 2.2055151, y: 1.0973969, z: 3.2430117}
+    m_Value: {x: 2.7660325, y: 1.5899556, z: 10.960814}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -761,13 +761,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.5092009, y: -0.012663985, z: 0.00749583, w: -0.860542}
+    m_Target: {x: -0.42712578, y: -0.005166922, z: 0.0024457902, w: -0.9041954}
     speed: 2
-    m_Value: {x: -0.50919205, y: -0.012663766, z: 0.0074957004, w: -0.8605271}
+    m_Value: {x: -0.4271176, y: -0.005166823, z: 0.0024457432, w: -0.9041781}
   m_Size:
-    m_Target: 4.166025
+    m_Target: 6.056861
     speed: 2
-    m_Value: 4.166025
+    m_Value: 6.356861
   m_Ortho:
     m_Target: 0
     speed: 2

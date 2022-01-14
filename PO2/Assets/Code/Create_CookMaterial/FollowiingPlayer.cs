@@ -46,14 +46,16 @@ public class FollowiingPlayer : MonoBehaviour
 
             Vector3 Pos = Player.transform.position;
             Pos = Pos + Offset;
-            transform.position = Pos;        
+            transform.position = Pos;
+            
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                gameObject.layer = 0;
+                Hold = false;
+                Anim.SetBool("Hold", false);
+                this.gameObject.AddComponent<Rigidbody>();
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Hold = false;
-            Anim.SetBool("Hold", false);
-            this.gameObject.AddComponent<Rigidbody>();
-        }
     }
 }

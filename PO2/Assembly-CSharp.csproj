@@ -54,14 +54,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Code\PlayerController.cs" />
-    <Compile Include="Assets\Code\Create_CookMaterial\SeaweedCreate.cs" />
     <Compile Include="Assets\Code\Create_CookMaterial\FollowiingPlayer.cs" />
-    <Compile Include="Assets\Code\CameraCulling.cs" />
-    <Compile Include="Assets\Code\Create_CookMaterial\CucumberCreate.cs" />
     <Compile Include="Assets\Code\Create_CookMaterial\PrawnCreate.cs" />
+    <Compile Include="Assets\Code\Create_CookMaterial\CucumberCreate.cs" />
+    <Compile Include="Assets\Code\CameraCulling.cs" />
     <Compile Include="Assets\Code\Create_CookMaterial\RiceCreate.cs" />
     <Compile Include="Assets\Code\Create_CookMaterial\Prawn_Follow.cs" />
     <Compile Include="Assets\Code\Create_CookMaterial\LeftObject_Follow.cs" />
+    <Compile Include="Assets\Code\Create_CookMaterial\SeaweedCreate.cs" />
+    <Compile Include="Assets\Code\Singleton.cs" />
+    <Compile Include="Assets\Code\PlayerColl.cs" />
+    <Compile Include="Assets\Code\BoxColl.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
