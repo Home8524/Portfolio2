@@ -19,5 +19,6 @@ public class Singleton
 
     public bool PlayerColl = false;
     public int Test = 1;
+    public bool Holding = false;
 
 }

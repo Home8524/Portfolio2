@@ -90,8 +90,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4616894938849725226}
-  - component: {fileID: 2759913139873409951}
   - component: {fileID: 4762222280899926513}
+  - component: {fileID: -1064553024327358763}
   m_Layer: 9
   m_Name: cucumber_default
   m_TagString: Untagged
@@ -114,18 +114,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &2759913139873409951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5429460783087980944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbb6743b3f3a5a84189a575f7ce8f09d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &4762222280899926513
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -137,5 +125,17 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.5, z: 1}
+  m_Size: {x: 0, y: 0.5, z: 2}
   m_Center: {x: 0, y: 0.25, z: -0.02}
+--- !u!114 &-1064553024327358763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5429460783087980944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2580cf19ef4eb544aa2ad3d734ccf035, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

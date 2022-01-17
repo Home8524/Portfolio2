@@ -17,7 +17,7 @@ public class RiceCreate : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && coll)
+        if (Input.GetKeyDown(KeyCode.Space) && coll && !Singleton.GetInstance.Holding)
         {
             GameObject Obj;
             Obj = Instantiate(Rice);
@@ -28,6 +28,7 @@ public class RiceCreate : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("!");
         coll = true;
     }
     private void OnTriggerExit(Collider other)

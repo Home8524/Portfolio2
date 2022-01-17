@@ -12,10 +12,14 @@ public class LeftObject_Follow : MonoBehaviour
     void Start()
     {
         Player = GameObject.Find("Player");
-        Offset = new Vector3(-0.5f, 0.6f, 0.0f);
+        if (Player.transform.position.x > transform.position.x)
+            Offset = new Vector3(-0.5f, 0.6f, 0.0f);
+        else
+            Offset = new Vector3(0.5f, 0.6f, 0.0f);
         Anim = GameObject.Find("Chef").GetComponent<Animator>();
         Hold = true;
         coll = false;
+        Singleton.GetInstance.Holding = true;
     }
 
     void Update()
@@ -23,6 +27,8 @@ public class LeftObject_Follow : MonoBehaviour
         if (Hold)
         {
             Anim.SetBool("Hold", true);
+            BoxCollider BoxColl= gameObject.GetComponent<BoxCollider>();
+            BoxColl.size = new Vector3(0.5f, 1.0f, 2.0f);
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 Offset = new Vector3(-0.5f, 0.6f, 0.0f);
@@ -43,7 +49,6 @@ public class LeftObject_Follow : MonoBehaviour
             {
                 Offset = new Vector3(0.0f, 0.6f, -0.5f);
                 transform.eulerAngles = new Vector3(0.0f, 0.0f, 0.0f);
-
             }
 
             if(!Singleton.GetInstance.PlayerColl)
@@ -54,14 +59,16 @@ public class LeftObject_Follow : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                gameObject.layer = 10;
                 Hold = false;
                 Anim.SetBool("Hold", false);
                 this.gameObject.AddComponent<Rigidbody>();
+                BoxColl = gameObject.GetComponent<BoxCollider>();
+                BoxColl.isTrigger = false;
+                Singleton.GetInstance.Holding = false;
             }
         }
 
-        else if(coll)
+        else if(coll&&!Singleton.GetInstance.Holding)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -71,7 +78,10 @@ public class LeftObject_Follow : MonoBehaviour
                 Rigidbody Rigid= gameObject.GetComponent<Rigidbody>();
                 Destroy(Rigid);
                 coll = false;
+                BoxCollider BoxColl = gameObject.GetComponent<BoxCollider>();
+                BoxColl.isTrigger = true;
                 Singleton.GetInstance.PlayerColl = false;
+                Singleton.GetInstance.Holding = true;
             }
         }
     }
@@ -81,10 +91,26 @@ public class LeftObject_Follow : MonoBehaviour
         {
             coll = true;
         }
+        else
+            gameObject.layer = 10;
     }
     private void OnCollisionExit(Collision collision)
     {
         if (collision.transform.name != "-mesh")
+        {
+            coll = false;
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.name != "-mesh")
+        {
+            coll = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.transform.name != "-mesh")
         {
             coll = false;
         }

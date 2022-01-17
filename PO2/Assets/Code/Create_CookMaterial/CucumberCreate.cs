@@ -17,7 +17,7 @@ public class CucumberCreate : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && coll)
+        if (Input.GetKeyDown(KeyCode.Space) && coll && !Singleton.GetInstance.Holding)
         {
             GameObject Obj;
             Obj = Instantiate(Cucumber);
