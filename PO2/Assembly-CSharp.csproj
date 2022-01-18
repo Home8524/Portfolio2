@@ -8,8 +8,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{731E65DA-25FB-D5B9-8AF2-60C4BE4FDEC5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -54,19 +53,19 @@
     <UnityVersion>2020.3.23f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Code\Create_CookMaterial\PlateFollow.cs" />
     <Compile Include="Assets\Code\PlayerController.cs" />
-    <Compile Include="Assets\Code\Create_CookMaterial\FollowiingPlayer.cs" />
+    <Compile Include="Assets\Code\BoxColl.cs" />
     <Compile Include="Assets\Code\Create_CookMaterial\PrawnCreate.cs" />
     <Compile Include="Assets\Code\Create_CookMaterial\CucumberCreate.cs" />
     <Compile Include="Assets\Code\CameraCulling.cs" />
     <Compile Include="Assets\Code\Create_CookMaterial\RiceCreate.cs" />
-    <Compile Include="Assets\Code\Create_CookMaterial\Prawn_Follow.cs" />
-    <Compile Include="Assets\Code\Create_CookMaterial\LeftObject_Follow.cs" />
-    <Compile Include="Assets\Code\Create_CookMaterial\SeaweedCreate.cs" />
+    <Compile Include="Assets\Code\Create_CookMaterial\PlateFollow.cs" />
     <Compile Include="Assets\Code\Singleton.cs" />
+    <Compile Include="Assets\Code\Create_CookMaterial\LeftObject_Follow.cs" />
     <Compile Include="Assets\Code\PlayerColl.cs" />
-    <Compile Include="Assets\Code\BoxColl.cs" />
+    <Compile Include="Assets\Code\Create_CookMaterial\SeaweedCreate.cs" />
+    <Compile Include="Assets\Code\ChoppingBoard.cs" />
+    <Compile Include="Assets\Code\CookSlice.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

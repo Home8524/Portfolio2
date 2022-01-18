@@ -16,7 +16,7 @@ public class PlateFollow : MonoBehaviour
         Anim = GameObject.Find("Chef").GetComponent<Animator>();
         Hold = false;
         coll = false;
-        Singleton.GetInstance.Holding = true;
+        //Singleton.GetInstance.Holding = true;
     }
 
     void Update()
@@ -105,14 +105,14 @@ public class PlateFollow : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.name != "-mesh")
+        if (other.transform.name != "-mesh"&&other.gameObject.layer!=7)
         {
             coll = true;
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.transform.name != "-mesh")
+        if (other.transform.name != "-mesh" && other.gameObject.layer != 7)
         {
             coll = false;
         }

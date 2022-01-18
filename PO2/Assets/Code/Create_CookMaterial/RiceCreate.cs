@@ -28,7 +28,6 @@ public class RiceCreate : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("!");
         coll = true;
     }
     private void OnTriggerExit(Collider other)
