@@ -47,8 +47,33 @@ public class ChoppingBoard : MonoBehaviour
             BoxColl.size = new Vector3(0.5f, 1.0f, 2.0f);
             Vector3 Pos = transform.position;
 
+            Singleton.GetInstance.Holding = false;
+            switch (BoxNum)
+            {
+                case 1:
+                    Knife1.SetActive(false);
+                    break;
+                case 2:
+                    Knife2.SetActive(false);
+                    break;
+                case 3:
+                    Knife3.SetActive(false);
+                    break;
+                default:
+                    break;
+            }
+
             Object.transform.position = Pos + Offset;
             Object.transform.eulerAngles = new Vector3(0.0f, 0.0f, 0.0f);
+            if(Object.transform.name=="Prawn_Slice")
+            {
+                Object.transform.eulerAngles = new Vector3(0.0f, 90.0f, 0.0f);
+                BoxColl.size = new Vector3(3.0f, 1.0f, 0.3f);
+            }
+            else if(Object.transform.name=="Cucumber_slice")
+            {
+                BoxColl.size = new Vector3(0.03f, 0.1f, 0.3f);
+            }
         }
         else if (coll_c)
         {
@@ -104,15 +129,24 @@ public class ChoppingBoard : MonoBehaviour
 
             coll_p = false;
         }
-        if(Player_coll&&Input.GetKeyDown(KeyCode.LeftControl))
+        if(Player_coll&&Input.GetKeyDown(KeyCode.LeftControl) && !Singleton.GetInstance.Holding)
         {
             Anim.SetBool("Chopping", true);
             Knife.SetActive(true);
         }
-        else if(Player_coll&&Input.GetKeyUp(KeyCode.LeftControl))
+        else if(Player_coll&&Input.GetKeyUp(KeyCode.LeftControl) && !Singleton.GetInstance.Holding)
         {
             Anim.SetBool("Chopping", false);
             Knife.SetActive(false);
+        }
+        if(Input.GetKeyDown(KeyCode.Space)&&Player_coll)
+        {
+            if (Knife1.activeSelf == false && BoxNum ==1)
+                Knife1.SetActive(true);
+            if (Knife2.activeSelf == false && BoxNum == 2)
+                Knife2.SetActive(true);
+            if (Knife3.activeSelf == false && BoxNum == 3)
+                Knife3.SetActive(true);
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -127,14 +161,13 @@ public class ChoppingBoard : MonoBehaviour
             Object = other.gameObject;
             coll_p = true;
         }
-        else if (other.transform.name == "Rice" || other.transform.name == "Plate"
-            || other.transform.name == "Seaweed")
+        else if (other.transform.name == "Player")
+            Player_coll = true;
+        else if(other.transform.name!="Player")
         {
             Object = other.gameObject;
             coll = true;
         }
-        else if (other.transform.name == "Player"&&!Singleton.GetInstance.Holding)
-            Player_coll = true;
     }
     private void OnTriggerExit(Collider other)
     {
@@ -142,10 +175,9 @@ public class ChoppingBoard : MonoBehaviour
             coll_c = false;
         else if (other.transform.name == "Prawn")
             coll_p = false;
-        else if (other.transform.name == "Rice" || other.transform.name == "Plate"
-            || other.transform.name == "Seaweed")
-            coll = false;
         else if (other.transform.name == "Player")
             Player_coll = false;
+        else if (other.transform.name != "Player")
+            coll = false;
     }
 }

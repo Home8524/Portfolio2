@@ -18,14 +18,19 @@ public class BoxColl : MonoBehaviour
     
     void Update()
     {
-        if(coll)
+        if (coll)
         {
             Object.gameObject.layer = 11;
             Rigidbody Rigid =  Object.GetComponent<Rigidbody>();
             Destroy(Rigid);
             BoxCollider BoxColl = Object.GetComponent<BoxCollider>();
             BoxColl.isTrigger = true;
-            BoxColl.size = new Vector3(2.0f, 1.0f, 0.5f);
+            if(Object.name=="Cucumber_slice")
+                BoxColl.size = new Vector3(0.2f, 0.1f, 0.03f);
+            else if(Object.name=="Prawn_Slice")
+                BoxColl.size = new Vector3(3.0f, 1.0f, 0.3f);
+            else
+                BoxColl.size = new Vector3(2.0f, 1.0f, 0.5f);
             Vector3 Pos = transform.position;
             
             Object.transform.position = Pos+Offset;

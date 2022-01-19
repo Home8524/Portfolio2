@@ -28,10 +28,12 @@ public class CucumberCreate : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        coll = true;
+        if (other.transform.name == "Player")
+            coll = true;
     }
     private void OnTriggerExit(Collider other)
     {
-        coll = false;
+        if (other.transform.name == "Player")
+            coll = false;
     }
 }

@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2616921829038123775}
   - component: {fileID: 8409510460377040219}
-  m_Layer: 0
+  - component: {fileID: -2267269867805136140}
+  m_Layer: 11
   m_Name: prawn_slicing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,6 +45,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e576d6a5b8c69e24682a19277d7426c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &-2267269867805136140
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3394302506136252485}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 1, z: 0.3}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4504541016729179467
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,7 +69,7 @@ GameObject:
   - component: {fileID: 3136532265042263910}
   - component: {fileID: 5603567746623527221}
   - component: {fileID: 5126939664418947020}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: m_ingredients_prawn_sliced_diced_01_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
