@@ -13,6 +13,7 @@ public class CookSlice : MonoBehaviour
     private bool coll;
     private GameObject Player;
     private bool Chop_coll;
+    public bool Chop_Finish = false;
     private void Awake()
     {
         Slider_Prefab = Resources.Load("Prefabs/HP_Bar") as GameObject;
@@ -114,6 +115,10 @@ public class CookSlice : MonoBehaviour
             Obj.transform.position = Camera.main.WorldToScreenPoint(Pos);
             Obj.SetActive(true);
             Chop_coll = false;
+        }
+        if (AnchorPoint.value == 1)
+        {
+            Chop_Finish = true;
         }
     }
     private void FixedUpdate()

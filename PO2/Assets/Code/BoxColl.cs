@@ -29,6 +29,10 @@ public class BoxColl : MonoBehaviour
                 BoxColl.size = new Vector3(0.2f, 0.1f, 0.03f);
             else if(Object.name=="Prawn_Slice")
                 BoxColl.size = new Vector3(3.0f, 1.0f, 0.3f);
+            else if(Object.name=="Plate")
+            {
+                BoxColl.size = new Vector3(0.02f, 0.01f, 0.01f);
+            }
             else
                 BoxColl.size = new Vector3(2.0f, 1.0f, 0.5f);
             Vector3 Pos = transform.position;

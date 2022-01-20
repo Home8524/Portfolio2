@@ -13,6 +13,7 @@ public class RicePot : MonoBehaviour
     private GameObject Player;
     private bool Chop_coll;
     private bool Flag;
+    public bool Pot_Finish = false;
     private void Awake()
     {
         Slider_Prefab = Resources.Load("Prefabs/HP_Bar") as GameObject;
@@ -111,7 +112,7 @@ public class RicePot : MonoBehaviour
         }
         if(AnchorPoint.value==1)
         {
-
+            Pot_Finish = true;
         }
     }
     private void FixedUpdate()

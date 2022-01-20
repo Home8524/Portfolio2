@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class LeftObject_Follow : MonoBehaviour
 {
-    private GameObject Player;
-    private Vector3 Offset;
-    private Animator Anim;
-    private bool Hold;
-    private bool coll;
+   [SerializeField] private GameObject Player;
+   [SerializeField] private Vector3 Offset;
+   [SerializeField] private Animator Anim;
+   [SerializeField] private bool Hold;
+   [SerializeField] private bool coll;
     void Start()
     {
         Player = GameObject.Find("Player");
@@ -51,12 +51,12 @@ public class LeftObject_Follow : MonoBehaviour
                 transform.eulerAngles = new Vector3(0.0f, 0.0f, 0.0f);
             }
 
-            if(!Singleton.GetInstance.PlayerColl)
-            {
+            //if(!Singleton.GetInstance.PlayerColl)
+            //{
                 Vector3 Pos = Player.transform.position;
                 Pos = Pos + Offset;
                 transform.position = Pos;
-            }
+            //}
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Hold = false;

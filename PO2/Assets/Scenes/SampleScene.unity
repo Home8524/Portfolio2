@@ -761,7 +761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 837922c189608f6409466e06aa3178d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: {x: 0, y: 0.6, z: 0.2}
+  Offset: {x: 0.1, y: 0.6, z: 0.3}
 --- !u!65 &244962668
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1861,7 +1861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 837922c189608f6409466e06aa3178d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: {x: 0, y: 0.6, z: 0.2}
+  Offset: {x: 0.1, y: 0.6, z: 0.3}
 --- !u!65 &637187021
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3444,7 +3444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 837922c189608f6409466e06aa3178d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: {x: 0, y: 0.6, z: 0.2}
+  Offset: {x: 0.1, y: 0.6, z: 0.3}
 --- !u!65 &1255060008
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3773,7 +3773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 837922c189608f6409466e06aa3178d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: {x: 0, y: 0.6, z: 0.2}
+  Offset: {x: 0.1, y: 0.6, z: 0.3}
 --- !u!65 &1427682167
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5387,7 +5387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 837922c189608f6409466e06aa3178d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: {x: 0, y: 0.6, z: 0.2}
+  Offset: {x: 0.1, y: 0.6, z: 0.3}
 --- !u!65 &1990497561
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6469,6 +6469,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 686937d482c0de54482a17affb620b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Rice: 0
+  Prawn: 0
+  Cucumber: 0
+  Seaweed: 0
 --- !u!65 &101321777668069820
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6480,8 +6484,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.001637335, z: 0.003}
-  m_Center: {x: 0, y: 0.0006428328, z: 0}
+  m_Size: {x: 0.02, y: 0.01, z: 0.01}
+  m_Center: {x: -0.0005, y: 0.0006428328, z: 0}
 --- !u!54 &101321777668069821
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12128,6 +12132,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 686937d482c0de54482a17affb620b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Rice: 0
+  Prawn: 0
+  Cucumber: 0
+  Seaweed: 0
 --- !u!65 &1122102400765263330
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12139,8 +12147,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.001637335, z: 0.003}
-  m_Center: {x: 0, y: 0.0006428328, z: 0}
+  m_Size: {x: 0.02, y: 0.01, z: 0.01}
+  m_Center: {x: -0.0005, y: 0.0006428328, z: 0}
 --- !u!54 &1122102400765263331
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -48730,6 +48738,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 686937d482c0de54482a17affb620b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Rice: 0
+  Prawn: 0
+  Cucumber: 0
+  Seaweed: 0
 --- !u!65 &7766073860300006505
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48741,8 +48753,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.001637335, z: 0.003}
-  m_Center: {x: 0, y: 0.0006428328, z: 0}
+  m_Size: {x: 0.02, y: 0.01, z: 0.01}
+  m_Center: {x: -0.0005, y: 0.0006428328, z: 0}
 --- !u!54 &7766073860300006506
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -56081,6 +56093,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 686937d482c0de54482a17affb620b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Rice: 0
+  Prawn: 0
+  Cucumber: 0
+  Seaweed: 0
 --- !u!65 &9074621781109023760
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56092,8 +56108,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.001637335, z: 0.003}
-  m_Center: {x: 0, y: 0.0006428328, z: 0}
+  m_Size: {x: 0.02, y: 0.01, z: 0.01}
+  m_Center: {x: -0.0005, y: 0.0006428328, z: 0}
 --- !u!54 &9074621781109023761
 Rigidbody:
   m_ObjectHideFlags: 0
