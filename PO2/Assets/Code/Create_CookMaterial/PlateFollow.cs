@@ -7,16 +7,16 @@ public class PlateFollow : MonoBehaviour
     private GameObject Player;
     private Vector3 Offset;
     private Animator Anim;
-    private bool Hold;
+    public bool Hold;
     private bool coll;
     private GameObject ObjectSave;
     private bool flag;
     private GameObject Tmp;
-
-    [SerializeField] private bool Rice;
-    [SerializeField] private bool Prawn;
-    [SerializeField] private bool Cucumber;
-    [SerializeField] private bool Seaweed;
+    
+    public bool Rice;
+    public bool Prawn;
+    public bool Cucumber;
+    public bool Seaweed;
     private GameObject Rice_plate;
     private GameObject Rice_Cucumber_plate;
     private GameObject Rice_Seaweed_plate;
@@ -25,16 +25,20 @@ public class PlateFollow : MonoBehaviour
     private GameObject Cucumber_plate;
     private GameObject Prawn_sushi;
     private GameObject Sushi;
+    private GameObject Sushi3;
+    private GameObject Sushi4;
     private void Awake()
     {
         Rice_plate = Resources.Load("Prefabs/rice_plate") as GameObject;
         Seaweed_plate = Resources.Load("Prefabs/seaweed_plate") as GameObject;
         Rice_Seaweed_plate = Resources.Load("Prefabs/rice+seaweed") as GameObject;
         Cucumber_plate = Resources.Load("Prefabs/cucumber_plate") as GameObject;
-        Prawn_sushi = Resources.Load("Prefabs/Sushi2") as GameObject;
+        Prawn_sushi = Resources.Load("Prefabs/prawn_sliced") as GameObject;
         Rice_Cucumber_plate = Resources.Load("Prefabs/rice+cucumber") as GameObject;
         Seaweed_Cucumber_plate = Resources.Load("Prefabs/seaweed+cucumber") as GameObject;
         Sushi = Resources.Load("Prefabs/Sushi1") as GameObject;
+        Sushi3 = Resources.Load("Prefabs/Sushi3") as GameObject;
+        Sushi4 = Resources.Load("Prefabs/Sushi4") as GameObject;
     }
     void Start()
     {
@@ -153,7 +157,18 @@ public class PlateFollow : MonoBehaviour
                     }
                 }
 
-                if (Rice && !Prawn && Seaweed && Cucumber)
+                // ½Ò + ¹Ì¿ª + ¿ÀÀÌ + ¿Õ»õ¿ì
+                if (Rice && Prawn && Seaweed && Cucumber)
+                {
+                    Destroy(Tmp);
+                    Tmp = Instantiate(Sushi3);
+                    Tmp.transform.parent = transform;
+                    Vector3 Pos = transform.position;
+                    Vector3 mOffset = new Vector3(0.0f, 0.2f, 0.0f);
+                    Tmp.transform.position = Pos + mOffset;
+                }
+                // ½Ò + ¹Ì¿ª + ¿ÀÀÌ
+                else if (Rice && !Prawn && Seaweed && Cucumber)
                 {
                     Destroy(Tmp);
                     Tmp = Instantiate(Sushi);
@@ -162,6 +177,17 @@ public class PlateFollow : MonoBehaviour
                     Vector3 mOffset = new Vector3(0.0f, 0.2f, 0.0f);
                     Tmp.transform.position = Pos + mOffset;
                 }
+                // ½Ò + ¹Ì¿ª + ¿Õ»õ¿ì
+                else if (Rice && Prawn && Seaweed && !Cucumber)
+                {
+                    Destroy(Tmp);
+                    Tmp = Instantiate(Sushi4);
+                    Tmp.transform.parent = transform;
+                    Vector3 Pos = transform.position;
+                    Vector3 mOffset = new Vector3(0.0f, 0.2f, 0.0f);
+                    Tmp.transform.position = Pos + mOffset;
+                }
+                // ¹Ì¿ª + ¿ÀÀÌ
                 else if (!Rice && !Prawn && Seaweed && Cucumber)
                 {
                     Destroy(Tmp);
@@ -172,6 +198,7 @@ public class PlateFollow : MonoBehaviour
                     Tmp.transform.position = Pos + mOffset;
                 }
 
+                // ½Ò + ¹Ì¿ª
                 else if (Rice && !Prawn && Seaweed && !Cucumber)
                 {
                     Destroy(Tmp);
@@ -181,6 +208,7 @@ public class PlateFollow : MonoBehaviour
                     Vector3 mOffset = new Vector3(0.0f, 0.2f, 0.0f);
                     Tmp.transform.position = Pos + mOffset;
                 }
+                // ½Ò + ¿ÀÀÌ
                 else if (Rice && !Prawn && !Seaweed && Cucumber)
                 {
                     Destroy(Tmp);
@@ -190,6 +218,7 @@ public class PlateFollow : MonoBehaviour
                     Vector3 mOffset = new Vector3(0.0f, 0.2f, 0.0f);
                     Tmp.transform.position = Pos + mOffset;
                 }
+                // ½Ò
                 else if(Rice&&!Prawn&&!Seaweed&&!Cucumber)
                 {
                     Tmp = Instantiate(Rice_plate);
@@ -198,6 +227,7 @@ public class PlateFollow : MonoBehaviour
                     Vector3 mOffset = Vector3.zero;
                     Tmp.transform.position = Pos + mOffset;
                 }
+                // ¹Ì¿ª
                 else if(!Rice && !Prawn && Seaweed && !Cucumber)
                 {
                     Tmp = Instantiate(Seaweed_plate);
@@ -206,6 +236,7 @@ public class PlateFollow : MonoBehaviour
                     Vector3 mOffset = new Vector3(0.0f, 0.2f, 0.0f);
                     Tmp.transform.position = Pos + mOffset;
                 }
+                // ¿ÀÀÌ
                 else if (!Rice && !Prawn && !Seaweed && Cucumber)
                 {
                     Tmp = Instantiate(Cucumber_plate);
@@ -214,6 +245,7 @@ public class PlateFollow : MonoBehaviour
                     Vector3 mOffset = new Vector3(0.0f, 0.2f, 0.0f);
                     Tmp.transform.position = Pos + mOffset;
                 }
+                // ¿Õ»õ¿ì
                 else if (!Rice && Prawn && !Seaweed && !Cucumber)
                 {
                     Tmp = Instantiate(Prawn_sushi);

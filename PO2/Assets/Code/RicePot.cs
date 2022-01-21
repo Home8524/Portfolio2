@@ -118,7 +118,7 @@ public class RicePot : MonoBehaviour
     private void FixedUpdate()
     {
         if(Flag)
-            AnchorPoint.value += Time.deltaTime * 0.3f;
+            AnchorPoint.value += Time.deltaTime * 0.1f;
     }
     private void OnCollisionEnter(Collision collision)
     {

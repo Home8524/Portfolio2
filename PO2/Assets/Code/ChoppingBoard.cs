@@ -6,7 +6,6 @@ public class ChoppingBoard : MonoBehaviour
 {
     [SerializeField] private GameObject CucumberPrefab;
     [SerializeField] private GameObject PrawnPrefab;
-    [SerializeField] private GameObject PrawnPrefab2;
     private bool coll_c;
     private bool coll_p;
     private bool coll;
@@ -23,7 +22,6 @@ public class ChoppingBoard : MonoBehaviour
     {
         CucumberPrefab = Resources.Load("Prefabs/cucumber_slice") as GameObject;
         PrawnPrefab = Resources.Load("Prefabs/prawn_slicing") as GameObject;
-        PrawnPrefab2 = Resources.Load("Prefabs/prawn_sliced") as GameObject;
     }
     private void Start()
     {
