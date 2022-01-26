@@ -20,5 +20,7 @@ public class Singleton
     public bool PlayerColl = false;
     public int Test = 1;
     public bool Holding = false;
-
+    public int Recipecount = 0;
+    public List<GameObject> RecipeList = new List<GameObject>();
+    public int Slicecount = 1;
 }

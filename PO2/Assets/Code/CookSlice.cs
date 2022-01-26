@@ -14,6 +14,7 @@ public class CookSlice : MonoBehaviour
     private GameObject Player;
     private bool Chop_coll;
     public bool Chop_Finish = false;
+    private bool player_coll = false;
     private void Awake()
     {
         Slider_Prefab = Resources.Load("Prefabs/HP_Bar") as GameObject;
@@ -21,7 +22,8 @@ public class CookSlice : MonoBehaviour
     private void Start()
     {
        Obj = Instantiate(Slider_Prefab);
-       Obj.transform.name = "Hp";
+       Obj.transform.name = "Hp"+Singleton.GetInstance.Slicecount;
+       Singleton.GetInstance.Slicecount++;
        Obj.transform.parent = GameObject.Find("ChopUI").transform;
        AnchorPoint = Obj.GetComponent<Slider>();
 
@@ -119,11 +121,12 @@ public class CookSlice : MonoBehaviour
         if (AnchorPoint.value == 1)
         {
             Chop_Finish = true;
+            Obj.SetActive(false);
         }
     }
     private void FixedUpdate()
     {
-        if(Anim.GetBool("Chopping"))
+        if(Anim.GetBool("Chopping")&&player_coll)
             AnchorPoint.value += Time.deltaTime*0.3f;
     }
     private void OnCollisionEnter(Collision collision)
@@ -152,6 +155,10 @@ public class CookSlice : MonoBehaviour
         {
             Chop_coll = true;
         }
+        if(other.transform.name =="Player")
+        {
+            player_coll = true;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -162,6 +169,10 @@ public class CookSlice : MonoBehaviour
         if (other.transform.name == "Chop")
         {
             Chop_coll = false;
+        }
+        if (other.transform.name == "Player")
+        {
+            player_coll = false;
         }
     }
 }

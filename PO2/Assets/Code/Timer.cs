@@ -21,7 +21,7 @@ public class Timer : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Slider1.value -= Time.deltaTime * 0.1f;
+        Slider1.value -= 0.00011f;
         if(Slider1.value<0.33)
         {
             Image Tmp = Obj.GetComponent<Image>();
@@ -35,7 +35,7 @@ public class Timer : MonoBehaviour
         int M = fTime / 60;
         int S = fTime % 60;
         string test = "0" + S.ToString();
-        if(S!=0)
+        if(S>9)
             TimerText.text = "0" + M + " : " + S;
         else
             TimerText.text = "0" + M + " : " + test;

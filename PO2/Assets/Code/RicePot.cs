@@ -21,7 +21,8 @@ public class RicePot : MonoBehaviour
     private void Start()
     {
         Obj = Instantiate(Slider_Prefab);
-        Obj.transform.name = "Hp";
+        Obj.transform.name = "Hp" + Singleton.GetInstance.Slicecount;
+        Singleton.GetInstance.Slicecount++;
         Obj.transform.parent = GameObject.Find("ChopUI").transform;
         AnchorPoint = Obj.GetComponent<Slider>();
 
@@ -113,6 +114,7 @@ public class RicePot : MonoBehaviour
         if(AnchorPoint.value==1)
         {
             Pot_Finish = true;
+            Obj.SetActive(false);
         }
     }
     private void FixedUpdate()

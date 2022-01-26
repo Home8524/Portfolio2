@@ -8,8 +8,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{731E65DA-25FB-D5B9-8AF2-60C4BE4FDEC5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -62,17 +61,19 @@
     <Compile Include="Assets\Code\CameraCulling.cs" />
     <Compile Include="Assets\Code\CookSlice.cs" />
     <Compile Include="Assets\Code\Create_CookMaterial\RiceCreate.cs" />
+    <Compile Include="Assets\Code\ShowIcon.cs" />
     <Compile Include="Assets\Code\Create_CookMaterial\PlateFollow.cs" />
+    <Compile Include="Assets\Code\RecipeTimer.cs" />
     <Compile Include="Assets\Code\Singleton.cs" />
+    <Compile Include="Assets\Code\Timer.cs" />
+    <Compile Include="Assets\Code\Bin.cs" />
     <Compile Include="Assets\Code\Pot.cs" />
     <Compile Include="Assets\Code\RicePot.cs" />
     <Compile Include="Assets\Code\Create_CookMaterial\LeftObject_Follow.cs" />
     <Compile Include="Assets\Code\PlayerColl.cs" />
     <Compile Include="Assets\Code\Create_CookMaterial\SeaweedCreate.cs" />
-    <Compile Include="Assets\Code\ShowIcon.cs" />
-    <Compile Include="Assets\Code\Bin.cs" />
-    <Compile Include="Assets\Code\RecipeTimer.cs" />
-    <Compile Include="Assets\Code\Timer.cs" />
+    <Compile Include="Assets\Code\RecipeSpawn.cs" />
+    <Compile Include="Assets\Code\Pass.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
