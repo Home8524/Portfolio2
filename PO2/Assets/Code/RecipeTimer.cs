@@ -34,10 +34,10 @@ public class RecipeTimer : MonoBehaviour
             Speed += 0.02f;
         }
         if(Slider1.value!=0)
-            Slider1.value -= Time.deltaTime * 0.05f;
+            Slider1.value -= Time.deltaTime * 0.03f;
         else if(Slider2.value!=0)
         {
-            Slider2.value -= Time.deltaTime * 0.05f;
+            Slider2.value -= Time.deltaTime * 0.03f;
             Image Img1 = Fillcolor2.GetComponent<Image>();
             Img1.color = new Color(1.0f, 1.0f, 0.0f);
             Image Img2 = Fillcolor3.GetComponent<Image>();
@@ -45,7 +45,7 @@ public class RecipeTimer : MonoBehaviour
         }
         else if(Slider3.value!=0)
         {
-            Slider3.value -= Time.deltaTime * 0.05f;
+            Slider3.value -= Time.deltaTime * 0.03f;
             Image Img2 = Fillcolor3.GetComponent<Image>();
             Img2.color = new Color(1.0f, 0.0f, 0.0f);
         }

@@ -8,7 +8,7 @@ public class PlateFollow : MonoBehaviour
     private Vector3 Offset;
     private Animator Anim;
     public bool Hold;
-    private bool coll;
+    public bool coll;
     private GameObject ObjectSave;
     private bool flag;
     private GameObject Tmp;

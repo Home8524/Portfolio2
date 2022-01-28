@@ -23,4 +23,8 @@ public class Singleton
     public int Recipecount = 0;
     public List<GameObject> RecipeList = new List<GameObject>();
     public int Slicecount = 1;
+    public int Tipcnt = 1;
+    public int Coin = 0;
+    public int Placecnt = 4;
+    public Stack<GameObject> PlateList = new Stack<GameObject>();
 }

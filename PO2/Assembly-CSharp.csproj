@@ -66,14 +66,17 @@
     <Compile Include="Assets\Code\RecipeTimer.cs" />
     <Compile Include="Assets\Code\Singleton.cs" />
     <Compile Include="Assets\Code\Timer.cs" />
+    <Compile Include="Assets\Code\RecipeSpawn.cs" />
     <Compile Include="Assets\Code\Bin.cs" />
     <Compile Include="Assets\Code\Pot.cs" />
     <Compile Include="Assets\Code\RicePot.cs" />
     <Compile Include="Assets\Code\Create_CookMaterial\LeftObject_Follow.cs" />
+    <Compile Include="Assets\Code\Pass.cs" />
     <Compile Include="Assets\Code\PlayerColl.cs" />
     <Compile Include="Assets\Code\Create_CookMaterial\SeaweedCreate.cs" />
-    <Compile Include="Assets\Code\RecipeSpawn.cs" />
-    <Compile Include="Assets\Code\Pass.cs" />
+    <Compile Include="Assets\Code\DirtyPlate.cs" />
+    <Compile Include="Assets\Code\PlateReturn.cs" />
+    <Compile Include="Assets\Code\Sink.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
