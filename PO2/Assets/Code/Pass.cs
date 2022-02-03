@@ -63,6 +63,17 @@ public class Pass : MonoBehaviour
             Singleton.GetInstance.PlateList.Push(Plate);
             coll = false;
             Singleton.GetInstance.Placecnt--;
+            
+            Tmp.Cucumber = false;
+            Tmp.Prawn = false;
+            Tmp.Rice = false;
+            Tmp.Seaweed = false;
+            Transform[] Clist = Tmp.GetComponentsInChildren<Transform>();
+            for (int i = 1; i < Clist.Length; ++i)
+            {
+                if (Clist[i] != transform)
+                    Destroy(Clist[i].gameObject);
+            }
         }
         Text Coin = GameObject.Find("Coin").GetComponent<Text>();
         Coin.text = Singleton.GetInstance.Coin.ToString();

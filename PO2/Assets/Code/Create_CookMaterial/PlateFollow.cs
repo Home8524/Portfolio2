@@ -63,6 +63,7 @@ public class PlateFollow : MonoBehaviour
         }
         if (Hold)
         {
+            transform.eulerAngles = new Vector3(0.0f, 0.0f, 0.0f);
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 Offset = new Vector3(-0.5f, 0.6f, 0.0f);

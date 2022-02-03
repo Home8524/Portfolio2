@@ -40,6 +40,13 @@ public class RecipeSpawn : MonoBehaviour
                 Debug.Log(tmp.transform.name);
             }
         }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            foreach (GameObject tmp in Singleton.GetInstance.PlateList)
+            {
+                Debug.Log(tmp.transform.name);
+            }
+        }
     }
     private void FixedUpdate()
     {
