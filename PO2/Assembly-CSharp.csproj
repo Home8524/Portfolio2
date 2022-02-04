@@ -58,7 +58,9 @@
     <Compile Include="Assets\Code\ChoppingBoard.cs" />
     <Compile Include="Assets\Code\Create_CookMaterial\PrawnCreate.cs" />
     <Compile Include="Assets\Code\Create_CookMaterial\CucumberCreate.cs" />
+    <Compile Include="Assets\Scripts\SceneChange.cs" />
     <Compile Include="Assets\Code\CameraCulling.cs" />
+    <Compile Include="Assets\Scripts\LoadingController.cs" />
     <Compile Include="Assets\Code\PlateReturn.cs" />
     <Compile Include="Assets\Code\CookSlice.cs" />
     <Compile Include="Assets\Code\DirtyPlate.cs" />
@@ -77,8 +79,7 @@
     <Compile Include="Assets\Code\PlayerColl.cs" />
     <Compile Include="Assets\Code\Sink.cs" />
     <Compile Include="Assets\Code\Create_CookMaterial\SeaweedCreate.cs" />
-    <Compile Include="Assets\Scripts\SceneChange.cs" />
-    <Compile Include="Assets\Scripts\LoadingController.cs" />
+    <Compile Include="Assets\Stage0 Script\CameraMove.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
