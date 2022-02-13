@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
-    
     void Update()
     {
-        float Hor = Input.GetAxisRaw("Horizontal");
-        float Ver = Input.GetAxisRaw("Vertical");
-        Vector3 pos = new Vector3(Hor, 0.0f, Ver);
-        transform.position += pos;
+        GameObject Obj = GameObject.Find("Player");
+        Vector3 Pos = Obj.transform.position;
+        Pos.y += 28;
+        Pos.z -= 10;
+        transform.position = Pos;
+
 
     }
 }
