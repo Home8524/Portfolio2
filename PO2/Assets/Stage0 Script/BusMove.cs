@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class BusMove : MonoBehaviour
 {
+    [SerializeField] AudioSource AS;
 
+    private void Start()
+    {
+        AS = transform.GetComponent<AudioSource>();
+    }
     void Update()
     {
         float Hor = Input.GetAxisRaw("Horizontal");
@@ -16,6 +21,11 @@ public class BusMove : MonoBehaviour
             transform.position += Pos * 5.0f * Time.deltaTime;
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(Pos),
                 10.0f*Time.deltaTime);
+            AS.Play();
+        }
+        else
+        {
+            AS.Stop();
         }
     }
 }
