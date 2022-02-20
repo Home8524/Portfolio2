@@ -26,5 +26,7 @@ public class Singleton
     public int Tipcnt = 1;
     public int Coin = 0;
     public int Placecnt = 4;
+    public int FailRe = 0;
+    public int Tipcoin = 0;
     public Stack<GameObject> PlateList = new Stack<GameObject>();
 }

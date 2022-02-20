@@ -18,6 +18,7 @@ public class ChoppingBoard : MonoBehaviour
     public GameObject Knife1;
     public GameObject Knife2;
     public GameObject Knife3;
+    public AudioSource As;
     private void Awake()
     {
         CucumberPrefab = Resources.Load("Prefabs/cucumber_slice") as GameObject;
@@ -31,6 +32,7 @@ public class ChoppingBoard : MonoBehaviour
         Offset = new Vector3(0.2f,0.6f,0.0f);
         Anim = GameObject.Find("Chef").GetComponent<Animator>();
         Player_coll = false;
+        As = transform.GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -145,6 +147,14 @@ public class ChoppingBoard : MonoBehaviour
                 Knife2.SetActive(true);
             if (Knife3.activeSelf == false && BoxNum == 3)
                 Knife3.SetActive(true);
+        }
+        if(Anim.GetBool("Chopping"))
+        {
+            As.volume = 0.2f;
+        }
+        else
+        {
+            As.volume = 0.0f;
         }
     }
     private void OnTriggerEnter(Collider other)

@@ -14,6 +14,7 @@ public class RicePot : MonoBehaviour
     private bool Chop_coll;
     private bool Flag;
     public bool Pot_Finish = false;
+    private AudioSource As;
     private void Awake()
     {
         Slider_Prefab = Resources.Load("Prefabs/HP_Bar") as GameObject;
@@ -39,6 +40,7 @@ public class RicePot : MonoBehaviour
         Player = GameObject.Find("Player");
         Chop_coll = false;
         Flag = true;
+        As = transform.GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -113,6 +115,7 @@ public class RicePot : MonoBehaviour
         }
         if(AnchorPoint.value==1)
         {
+            if(!Pot_Finish) As.Play();
             Pot_Finish = true;
             Obj.SetActive(false);
         }

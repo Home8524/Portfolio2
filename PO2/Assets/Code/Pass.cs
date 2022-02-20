@@ -10,8 +10,10 @@ public class Pass : MonoBehaviour
     public GameObject Tip2;
     public GameObject Tip3;
     public GameObject Tip4;
+    private AudioSource As;
     private void Start()
     {
+        As = transform.GetComponent<AudioSource>();
         coll = false;
     }
     private void Update()
@@ -32,7 +34,9 @@ public class Pass : MonoBehaviour
                             Destroy(Rec);
                             Singleton.GetInstance.Recipecount--;
                             breaktest = true;
-                            Singleton.GetInstance.Coin += 48 + Singleton.GetInstance.Tipcnt * 10;
+                            As.Play();
+                            Singleton.GetInstance.Tipcoin += Singleton.GetInstance.Tipcnt * 10;
+                            Singleton.GetInstance.Coin += 36 + Singleton.GetInstance.Tipcnt * 10;
                             if (Singleton.GetInstance.Tipcnt < 4)
                                 Singleton.GetInstance.Tipcnt++;
                         }
@@ -48,6 +52,8 @@ public class Pass : MonoBehaviour
                             Destroy(Rec);
                             Singleton.GetInstance.Recipecount--;
                             breaktest = true;
+                            As.Play();
+                            Singleton.GetInstance.Tipcoin += Singleton.GetInstance.Tipcnt * 10;
                             Singleton.GetInstance.Coin += 36 + Singleton.GetInstance.Tipcnt * 10;
                             if (Singleton.GetInstance.Tipcnt < 4)
                                 Singleton.GetInstance.Tipcnt++;

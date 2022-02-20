@@ -21,11 +21,12 @@ public class BusMove : MonoBehaviour
             transform.position += Pos * 5.0f * Time.deltaTime;
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(Pos),
                 10.0f*Time.deltaTime);
-            AS.Play();
+            //AS.Play();
+            AS.volume = 0.5f;
         }
         else
         {
-            AS.Stop();
+            AS.volume = 0.0f;
         }
     }
 }

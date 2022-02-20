@@ -22,8 +22,8 @@ public class LoadingController : MonoBehaviour
     {
         NextScene = _SceneName;
 
-        //SceneManager.LoadScene("MainLoadIngScene");
-        SceneManager.LoadScene("NextSceneUI");
+        SceneManager.LoadScene("MainLoadIngScene");
+       // SceneManager.LoadScene("NextSceneUI");
     }
 
     IEnumerator LoadScene()

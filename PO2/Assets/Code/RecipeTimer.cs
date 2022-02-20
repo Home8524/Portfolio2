@@ -11,13 +11,16 @@ public class RecipeTimer : MonoBehaviour
     public GameObject Fillcolor3;
     private float Speed;
     private bool coll;
-    // Start is called before the first frame update
+    private AudioSource As;
+    private bool flag = false;
+    public GameObject Fail_Img;
     void Start()
     {
         Slider1.value = 1;
         Slider2.value = 1;
         Slider3.value = 1;
         Speed = -10.0f;
+        As = transform.GetComponent<AudioSource>();
     }
     
     private void FixedUpdate()
@@ -51,18 +54,30 @@ public class RecipeTimer : MonoBehaviour
         }
         else
         {
-            Singleton.GetInstance.Recipecount--;
-            for(int i=Singleton.GetInstance.RecipeList.Count-1;i>=0;--i)
+            if(!flag)
             {
-                if(Singleton.GetInstance.RecipeList[i].transform.name==transform.name)
-                {
-                    Singleton.GetInstance.RecipeList.Remove(Singleton.GetInstance.RecipeList[i]);
-                }
+                As.Play();
+                Image Tmp= Fail_Img.GetComponent<Image>();
+                Tmp.color = new Color(1.0f, 0.0f, 0.0f);
+                Invoke("Delete_UI", 1.0f);
             }
-            Destroy(gameObject);
+            flag = true;
         }
     }
-
+    void Delete_UI()
+    {
+        Singleton.GetInstance.Recipecount--;
+        for(int i=Singleton.GetInstance.RecipeList.Count-1;i>=0;--i)
+        {
+            if(Singleton.GetInstance.RecipeList[i].transform.name==transform.name)
+            {
+                Singleton.GetInstance.RecipeList.Remove(Singleton.GetInstance.RecipeList[i]);
+            }
+        }
+        Singleton.GetInstance.Coin -= -20;
+        Singleton.GetInstance.FailRe++;
+        Destroy(gameObject);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.position.x < transform.position.x)
